@@ -6,4 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-cookbook_file '/etc/dd-agent/conf.d/zk.yaml'
+cookbook_file '/etc/dd-agent/conf.d/zk.yaml' do
+  notifies :restart, 'service[datadog-agent]', :delayed
+end
