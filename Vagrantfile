@@ -75,11 +75,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.berkshelf.except = []
 
   config.vm.provision :chef_solo do |chef|
-    chef.data_bags_path = 'data_bags'
-    chef.run_list = [
-      'recipe[aws-base::default]',
-      'recipe[apache_zookeeper::default]',
-      'recipe[datadog::dd-agent]'
-    ]
+    chef.roles_path = 'roles'
+    chef.add_role('zookeeper')
   end
 end
