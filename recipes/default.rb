@@ -6,3 +6,4 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+cookbook_file '/etc/dd-agent/conf.d/zk.yaml'
