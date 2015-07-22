@@ -76,6 +76,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.roles_path = 'roles'
-    chef.add_role('zookeeper')
+    # chef.add_role('zookeeper')
+    chef.add_role('java')
+    chef.add_role('kafka')
+    chef.add_role('datadog-agent')
   end
 end
