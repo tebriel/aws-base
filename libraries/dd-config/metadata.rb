@@ -1,0 +1,7 @@
+name             'dd-config'
+maintainer       'Chris Moultrie'
+maintainer_email 'cmoultrie@pindropsecurity.com'
+license          'All rights reserved'
+description      'Installs/Configures aws-base'
+long_description 'Installs/Configures aws-base'
+version          '0.1.1'

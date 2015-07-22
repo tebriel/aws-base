@@ -11,8 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = 'aws-base-berkshelf'
-
   # Set the version of chef to install using the vagrant-omnibus plugin
   # NOTE: You will need to install the vagrant-omnibus plugin:
   #
@@ -26,6 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If this value is a shorthand to a box in Vagrant Cloud then
   # config.vm.box_url doesn't need to be specified.
   config.vm.box = 'chef/ubuntu-14.04'
+  # config.vm.box = 'ubuntu/trusty64'
 
 
   # Assign this VM to a host-only network IP, allowing you to access it
@@ -74,11 +73,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # to skip installing and copying to Vagrant's shelf.
   # config.berkshelf.except = []
 
+  # config.vm.hostname = 'aws-base-berkshelf'
+  # config.vm.hostname = 'kafka1'
+  config.vm.hostname = 'zookeeper1'
+
   config.vm.provision :chef_solo do |chef|
     chef.roles_path = 'roles'
-    # chef.add_role('zookeeper')
+    chef.cookbooks_path = 'cookbooks'
     chef.add_role('java')
-    chef.add_role('kafka')
+    # chef.add_role('kafka')
+    chef.add_role('zookeeper')
     chef.add_role('datadog-agent')
   end
 end

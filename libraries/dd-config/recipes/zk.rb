@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: aws-base
-# Recipe:: default
+# Recipe:: zk
 #
 # Copyright (C) 2015 YOUR_NAME
 #
