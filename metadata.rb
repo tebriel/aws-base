@@ -1,6 +1,6 @@
 name             'aws-base'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Chris Moultrie'
+maintainer_email 'cmoultrie@pindropsecurity.com'
 license          'All rights reserved'
 description      'Installs/Configures aws-base'
 long_description 'Installs/Configures aws-base'
