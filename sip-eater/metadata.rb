@@ -1,0 +1,7 @@
+name             'sip-eater'
+maintainer       'Chris Moultrie'
+maintainer_email 'cmoultrie@pindropsecurity.com'
+license          'All rights reserved'
+description      'Installs/Configures sip-eater'
+long_description 'Installs/Configures sip-eater'
+version          '0.1.1'

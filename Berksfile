@@ -7,3 +7,4 @@ cookbook 'apache_zookeeper', git: 'https://github.com/bbaugher/apache_zookeeper.
 cookbook 'datadog'
 cookbook 'apache_kafka', '~> 1.5.0'
 cookbook 'dd-config', path: './dd-config'
+cookbook 'sip-eater', path: './sip-eater'
