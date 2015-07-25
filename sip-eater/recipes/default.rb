@@ -17,4 +17,9 @@ execute "pip install -r /opt/sip-eater/requirements.txt"
 
 cookbook_file "/etc/init/sipeater.conf"
 
+# Stop it if it's running
+execute "stop sipeater" do
+  ignore_failure true
+end
+
 execute "start sipeater"
